@@ -1,0 +1,29 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Size;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class SizeFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Size::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'size' => $this->faker->unique()->randomDigit(1,10),
+            'cms' => $this->faker->randomFloat(1,0,30.5)
+        ];
+    }
+}
